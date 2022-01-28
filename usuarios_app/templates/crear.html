@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            Crear
+        </title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+        <div class="box crear">
+            <form action="/registro" method="POST">
+                <h1>
+                    Añadir nuevo Usuario
+                </h1>
+                <div class="entrada">
+                    <label for="first_name">
+                        Nombre:
+                    </label>
+                    <input type="text" id="first_name" name="first_name"/>
+                </div>
+                <div class="entrada">
+                    <label for="last_name">
+                        Apellido:
+                    </label>
+                    <input type="text" id="last_name" name="last_name"/>
+                </div>
+                <div class="entrada">
+                    <label for="email">
+                        E-mail:
+                    </label>
+                    <input type="text" id="email" name="email"/>
+                </div>
+                <div class="entrada">
+                    <input type="hidden" id="fecha" name="fecha" value="2022-01-28"/>
+                </div>
+                <button type="submit">
+                    Crear
+                </button>
+            </form>
+            <form action="/home" method="POST">
+                <button type="submit">
+                    Home
+                </button>
+            </form>
+        </div>
+    </body>
+</html>
